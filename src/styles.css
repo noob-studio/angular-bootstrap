@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: logo;
+    src: url(assets/fonts/logo-font.otf);
+}
+
+  
+/* body {
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000 !important;
+} */
+
+
+/* .main-content{
+    margin-top: 100px;
+    background-color: #FFF;
+} */
+
+.logo-nav{
+    /* font-family: logo !important; */
+    /* font-size: 30px !important; */
+}
+.logo{
+    /* font-size: 150px !important; */
+    font-family: logo !important;
+    text-transform: inherit;
+    font-size: 80px !important;
+}
+
+.black-btn{
+    background-color: #333 !important;
+    color: #FFF !important;
+}
+
