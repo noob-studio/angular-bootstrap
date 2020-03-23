@@ -4,29 +4,18 @@
     src: url(assets/fonts/logo-font.otf);
 }
 
-  
-/* body {
-    min-height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #000 !important;
-} */
-
-
-/* .main-content{
-    margin-top: 100px;
-    background-color: #FFF;
-} */
-
-.logo-nav{
-    /* font-family: logo !important; */
-    /* font-size: 30px !important; */
+body, p{
+    font-family: 'Sarabun', sans-serif;
 }
-.logo{
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Titillium Web' !important;
+}
+.navbar-brand{
     /* font-size: 150px !important; */
-    font-family: logo !important;
+    font-family: 'Titillium Web' !important;
     text-transform: inherit;
-    font-size: 80px !important;
+    font-weight: bold;
+    color: #141414 ;
 }
 
 .black-btn{
@@ -34,3 +23,17 @@
     color: #FFF !important;
 }
 
+.navbar.navbar-dark.bg-dark{
+    background-color: #141414 !important;
+}
+
+.btn-red{
+    background-color: #ff0a16 !important;
+    color: #FFF !important;
+    border-radius: 90px !important;
+    border: solid 1px #ff0a16 !important;
+}
+
+.container{
+    margin-top: 20px;
+}

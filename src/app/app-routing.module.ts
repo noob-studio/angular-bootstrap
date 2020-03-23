@@ -1,5 +1,6 @@
-import { AboutComponent } from './page/about/about.component';
-import { FeaturesComponent } from './page/features/features.component';
+import { UserComponent } from './page/user/user.component';
+import { ProductComponent } from './page/product/product.component';
+import { BranchComponent } from './page/branch/branch.component';
 import { HomeComponent } from './page/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,13 +11,16 @@ const routes: Routes = [{
   pathMatch: 'full',
 },{
   path: 'home',
-  component: HomeComponent,
+  component: HomeComponent
 },{
-  path: 'features',
-  component: FeaturesComponent,
+  path: 'product',
+  component: ProductComponent,
 },{
-  path: 'about',
-  component: AboutComponent,
+  path: 'branch',
+  component: BranchComponent,
+},{
+  path: 'user',
+  component: UserComponent,
 }];
 
 @NgModule({

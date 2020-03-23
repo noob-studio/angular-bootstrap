@@ -1,0 +1,7 @@
+<div class="form-group">
+    <label>{{label}}</label>
+    <select class="custom-select" [(ngModel)]="selected" (change)="changeSelect()">
+      <option>กรุณาเลือก</option>
+      <option *ngFor="let row of choice;" value="{{row.value}}">{{row.name}}</option>
+    </select>
+</div>
