@@ -4,6 +4,9 @@
       <div class="row">
           <div class="col-md-6">
             <div class="card border-secondary mb-3" >
+                <div class="card-header">
+                  สินค้าในสต๊อค
+                </div>
                 <div class="card-body" style="display: block;">
                     <canvas *ngIf="ready" baseChart 
                         height="200"
@@ -16,16 +19,16 @@
           </div>
           <div class="col-md-6">
             <div class="card border-secondary mb-3" >
+                <div class="card-header">
+                  มูลค่าสต๊อค
+                </div>
                 <div class="card-body" style="display: block;">
-                    <canvas *ngIf="ready" baseChart 
-                        height="200"
-                        [datasets]="barChartData"
-                        [labels]="productLabels"
-                        [options]="barChartOptions"
-                        [plugins]="barChartPlugins"
-                        [legend]="barChartLegend"
-                        [chartType]="barChartType">
-                    </canvas>
+                  <canvas *ngIf="ready" baseChart 
+                      height="200"
+                      [data]="stockValue"
+                      [labels]="productLabels"
+                      [chartType]="doughnutChartType">
+                  </canvas>
                 </div>
               </div>
           </div>
@@ -45,6 +48,7 @@
                         <tr>
                             <th class="text-center">#</th>
                             <th class="text-center">Product</th>
+                            <th class="text-center">Product Price</th>
                             <th class="text-center">Branch</th>
                             <th class="text-center">In Stock</th>
                             <th class="text-center" colspan="2">Option</th>
@@ -54,6 +58,7 @@
                         <tr *ngFor="let row of inStock; let i = index">
                             <th class="text-center" scope="row">{{i+1}}</th>
                             <td class="text-center">{{row.product_name}}</td>
+                            <td class="text-center">{{row.product_price}} บาท</td>
                             <td class="text-center">{{row.branch_name}}</td>
                             <td class="text-center">{{row.pb_stock}}</td>
                             <td class="text-center">

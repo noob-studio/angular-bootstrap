@@ -43,9 +43,10 @@ export class ProductComponent implements OnInit {
       this.selectedModal.data = {
         product_id: this.productArr[no].id,
         product_name: this.productArr[no].name,
-        product_detail: this.productArr[no].detail
+        product_detail: this.productArr[no].detail,
+        product_price: this.productArr[no].productPrice
       }
-      console.log(JSON.stringify(this.selectedModal.data))
+      console.log(JSON.stringify(this.productArr[no]))
     }else{
       this.selectedModal.data = {}
     }

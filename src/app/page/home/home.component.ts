@@ -35,6 +35,10 @@ export class HomeComponent implements OnInit {
 
   public ready: boolean = false;
 
+  stockValue: MultiDataSet = [
+    []
+  ];
+
   productLabels: Label[] = [];
   productData: MultiDataSet = [
     []
@@ -71,10 +75,11 @@ export class HomeComponent implements OnInit {
     let val = this.inStock.map((row) => {
       return row.pb_stock;
     })
+    let value = this.inStock.map((row) => {
+      return row.pb_stock * row.product_price;
+    })
     this.productData = [val]
-    this.barChartData = [
-      { data: val, label: 'สินค้า' }
-    ];
+    this.stockValue = [value]
     this.ready = true;
   }
 

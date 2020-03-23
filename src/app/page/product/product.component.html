@@ -16,6 +16,7 @@
                 <th scope="col" class="text-center">id</th>
                 <th scope="col" class="text-center">name</th>
                 <th scope="col" class="text-center">detail</th>
+                <th scope="col" class="text-center">price</th>
                 <th scope="col" colspan="2" class="text-center">option</th>
               </tr>
             </thead>
@@ -25,6 +26,7 @@
                 <td class="text-center">{{row.id}}</td>
                 <td class="text-center">{{row.name}}</td>
                 <td class="text-center">{{row.detail}}</td>
+                <td class="text-center">{{row.productPrice}}</td>
                 <td class="text-center">
                   <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#myModal" (click)="setAction(1, i)">
                     <i class="far fa-edit"></i>
@@ -63,6 +65,10 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Detail</label>
           <textarea class="form-control" rows="3" placeholder="Enter product detail" [(ngModel)]="selectedModal.data.product_detail"></textarea>
+        </div>
+        <div class="form-group">
+          <label >Product Price</label>
+          <input type="number" class="form-control" placeholder="Enter price"  [(ngModel)]="selectedModal.data.product_price" />
         </div>
       </div>
 
